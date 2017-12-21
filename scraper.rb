@@ -3,11 +3,10 @@ require 'nokogiri'
 require 'open-uri'
 
 class Scraper
-  def self
-}    all
+  def self.call
     # this is how we request the page we're going to scrape
     uri = URI(
-      "https://sdw.ecb.europa.eu/quickview.do?SERIES_KEY=120.EXR.D.USD.EUR.SP00.A"
+      'https://sdw.ecb.europa.eu/quickview.do?SERIES_KEY=120.EXR.D.USD.EUR.SP00.A'
     )
     page = HTTParty.get(uri.to_s)
 
