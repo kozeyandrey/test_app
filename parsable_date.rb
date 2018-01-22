@@ -1,7 +1,10 @@
 class ParsableDate
   def self.call(string)
-    Date.parse(string)
-    true
+    if Date.parse(string)
+          true
+    else
+      false
+    end
   rescue ArgumentError
     false
   end
