@@ -15,7 +15,6 @@ class Command
 
   def exchanger(amount, dates)
     exchanger = Exchanger.new(@con)
-
     exchanger.exchange(amount, dates)
   end
 
