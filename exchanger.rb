@@ -12,7 +12,7 @@ class Exchanger
       if ParsableDate.call(date)
         "'#{date}'"
       else
-        raise(ArgumentError, 'Invalid dates')
+        raise(ArgumentError, "Invalid dates")
       end
     end
 
@@ -22,7 +22,7 @@ class Exchanger
 
     numbers = []
     rs.each do |row|
-      numbers << (amount * row['amount'].to_f).round(2)
+      numbers << (amount * row["amount"].to_f).round(2)
     end
 
     if numbers.size > 1
