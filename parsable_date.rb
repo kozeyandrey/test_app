@@ -1,7 +1,7 @@
 class ParsableDate
   def self.call(string)
     if Date.parse(string)
-          true
+      true
     else
       false
     end
